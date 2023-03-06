@@ -10,6 +10,9 @@ terraform {
 provider "aws" {
   profile = "default"
   region  = "us-east-1"
+  aws_access_key_id=ASIAQHLQOFBRH2ZIUPEU
+aws_secret_access_key=hyRlK6IMr3FyI5gTWIaLNS9hHlGEO2zQjQvnuzV0
+aws_session_token=FwoGZXIvYXdzEGgaDHFBQctSt9NLPTlB3iLJAf83V4SLbOSY85eOuBXSpcCOoiTc1rC+Vx8MMvBzKY5ok2mmnXhl7LZN1R+k7nwH+walaMVQy4hP1FVMV+wcnthJY8Jou2s9BcPN8Giq8KxWGyRgcDM7w4nPIgDYKdbtZlxevPaJ+v4Y/8lTyaTyeFNcRAVQM5G4TnNY0yAMUcT1Ergo7l0g8facmSwkt1uvjbWmNCr5/0jphSsn73dT3AlrdIW2LOqtq5eAASmZtafvnzc5kVrWQKqpBnD9A4+8y1jMVfMaA9t+HCieoJagBjIt7FhbDB3ifHRuIOIbbZEZt9s2e/us0sVli36HwAf+RIDbuO/o2rc3ITfm9Zxb
 }
 
 
