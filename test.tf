@@ -7,13 +7,7 @@ terraform {
   }
 }
 
-variable "provider_token" {
-  type = string
-  sensitive = true
-}
-
 provider "aws" {
-
   region  = "us-east-1"
 }
 
@@ -149,9 +143,9 @@ output "test_public_ip" {
 }
 
 output "prod_public_ip" {
-  value = aws_instance.prod.public_ip
+
+output "prod_public_ip" {
+
+output "test_public_ip" {
+  value = aws_instance.test.public_ip
 }
-
-
-
-
