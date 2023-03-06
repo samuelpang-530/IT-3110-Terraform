@@ -7,7 +7,13 @@ terraform {
   }
 }
 
+variable "provider_token" {
+  type = string
+  sensitive = true
+}
+
 provider "aws" {
+
   region  = "us-east-1"
 }
 
