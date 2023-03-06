@@ -8,11 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = "default"
   region  = "us-east-1"
-  aws_access_key_id=ASIAQHLQOFBRH2ZIUPEU
-aws_secret_access_key=hyRlK6IMr3FyI5gTWIaLNS9hHlGEO2zQjQvnuzV0
-aws_session_token=FwoGZXIvYXdzEGgaDHFBQctSt9NLPTlB3iLJAf83V4SLbOSY85eOuBXSpcCOoiTc1rC+Vx8MMvBzKY5ok2mmnXhl7LZN1R+k7nwH+walaMVQy4hP1FVMV+wcnthJY8Jou2s9BcPN8Giq8KxWGyRgcDM7w4nPIgDYKdbtZlxevPaJ+v4Y/8lTyaTyeFNcRAVQM5G4TnNY0yAMUcT1Ergo7l0g8facmSwkt1uvjbWmNCr5/0jphSsn73dT3AlrdIW2LOqtq5eAASmZtafvnzc5kVrWQKqpBnD9A4+8y1jMVfMaA9t+HCieoJagBjIt7FhbDB3ifHRuIOIbbZEZt9s2e/us0sVli36HwAf+RIDbuO/o2rc3ITfm9Zxb
 }
 
 
@@ -80,7 +76,7 @@ resource "aws_route_table_association" "a" {
 # Key pair
 resource "aws_key_pair" "tf-key" {
   key_name   = "deployer-key"
-  public_key  = file("~/.ssh/id_rsa.pub")
+  public_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyPxzLa5vI1yYHEBXxyXjWQUweGEEFhDkKHCgutbfwNTJQ5xy8//+dAJg0jVynJBvFnfKWKRGjH3e8/bNHQ/6DJwosinkJlVq+MNUOIlNdyMuLyCZqGteo1lgKlUBaMdqojg7Xbre952azHLo/Bpozbye3M9NxMCyhRAdtGC0R+GIom5/H6k9UmFit83ljPM0F2EX6jB23y4fVQ01+Ohv8C+DLgAwECxxH2IDGgy15t/w6D0fxnkJUmaVLNpjWeV+DulX+1RTnKVStPAbXEQxiaXanQblMZ1SuKG8CmU3Pj0poizsHAFZBe61NeSoI5nBkTp4GaVLmLAb7euKj/pmT d00230302@desdemona"
 }
 #Create instance
 
