@@ -142,10 +142,7 @@ output "test_public_ip" {
   value = aws_instance.test.public_ip
 }
 
-output "prod_public_ip" {
 
 output "prod_public_ip" {
-
-output "test_public_ip" {
   value = aws_instance.test.public_ip
 }
