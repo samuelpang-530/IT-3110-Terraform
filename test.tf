@@ -136,7 +136,7 @@ resource "aws_volume_attachment" "ebs_att" {
 }
 
 resource "aws_ebs_volume" "ebs_vol" {
-  availability_zone = "us-east-1"
+  availability_zone = "us-east-1a"
   size              = 1
 }
 
