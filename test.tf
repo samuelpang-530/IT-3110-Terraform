@@ -91,6 +91,7 @@ resource "aws_instance" "dev" {
   key_name      = "deployer-key"
   vpc_security_group_ids = [aws_security_group.tf-sg.id]
   associate_public_ip_address = true
+  availability_zone = "us-east-1a"
   user_data = <<-EOF
          #!/bin/bash
          wget http://computing.utahtech.edu/it/3110/notes/2021/terraform/install.sh -O /tmp/install.sh
