@@ -13,12 +13,6 @@ provider "aws" {
 }
 
 
-resource "aws_ebs_volume" "ebs_vol" {
-  availability_zone = "us-east-1"
-  size              = 1
-}
-
-
 
 
 
@@ -141,6 +135,10 @@ resource "aws_volume_attachment" "ebs_att" {
   instance_id = aws_instance.dev.id
 }
 
+resource "aws_ebs_volume" "ebs_vol" {
+  availability_zone = "us-east-1"
+  size              = 1
+}
 
 
 
