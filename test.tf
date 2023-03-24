@@ -13,6 +13,15 @@ provider "aws" {
 }
 
 
+resource "aws_ebs_volume" "ebs_vol" {
+  availability_zone = "us-east-1"
+  size              = 1
+}
+
+
+
+
+
 
 ## Create a VPC
 resource "aws_vpc" "tf-vpc" {
@@ -126,6 +135,11 @@ resource "aws_instance" "prod" {
          EOF
 }
 
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.ebs_vol.id
+  instance_id = aws_instance.dev.id
+}
 
 
 
